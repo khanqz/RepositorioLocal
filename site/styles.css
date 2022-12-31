@@ -1,0 +1,30 @@
+
+body{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    font-family: Helvetiva;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.title h1{
+    font-weight: bolder;
+    font-size: 20pt;
+    color: rgb(255, 166, 0);
+}
+
+.title h2{
+    font-weight: lighter;
+    font-size: 14pt;
+    color: rgb(255, 166, 0);
+}
+
+.content{
+    font-weight: lighter;
+    font-size: 12pt;
+}
+
+
+.list li a{
+    color: rgb(255, 166, 0);
+}
