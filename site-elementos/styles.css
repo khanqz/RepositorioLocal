@@ -1,30 +1,82 @@
 
-body{
-    background-color: rgb(51, 51, 51);
-    color: white;
-    font-family: Helvetiva;
-    margin-top: 40px;
-    margin-left: 40px;
+*{
+    margin: 0; /* zerando o espaçamentos da lista */
+    padding: 0;
 }
 
-.title h1{
+.elementos{ /* estilizando a lista */  
+    
+    cursor: pointer; /* Transforma o cursor em um pnteiro */
+    display: flex; /* alinhamento horizontal dos textos */ 
+    justify-content: space-evenly;  /* espaçamento entre os elementos da lista */ 
+    list-style: none; /* remove as bolinhas da lista */ 
+    padding-top: 10px;
+    padding-bottom: 10px; /* desgrudar os textos das bordas da página */ 
     font-weight: bolder;
-    font-size: 20pt;
-    color: rgb(255, 166, 0);
+    font-size: 20px;
+    font-family: 'Verdana';
+    background-color: #89a0ce; /* cor de fundo da lista */ 
+    transition: 0,5s cubic-bezier(0.75, 0.82, 0165,1); /* efeitos de transição | Ajusta a posição do texto conforme a escala da janela (AINDA SEM JS) */ 
+
 }
 
-.title h2{
-    font-weight: lighter;
-    font-size: 14pt;
-    color: rgb(255, 166, 0);
+.linhas{
+    cursor: pointer; 
 }
 
-.content{
-    font-weight: lighter;
-    font-size: 12pt;
+.span{ /* Criação MENU HAMBURGER */     
+
+    width: 30px; /* largura da linha */  
+    height: 4px; /* altura da linha */  
+    background-color: black;
+    margin-bottom: 5px; 
+    border-radius: 2px;
+    transition: 0.5 cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+.botao{
+    display: none;
 }
 
 
-.list li a{
-    color: rgb(255, 166, 0);
+@media (max-width:450px){ /* adaptação do conteúdo em telas menores de 450px */
+
+    .elementos{
+        flex-direction: column; /* alinhamento da coluna */
+        align-items: center; /* coluna defina ao centro */
+        position: absolute; /* itens flutuando na tela enquando ela é re-dimensionada */
+        margin: 0; /* margem zerada para ser modificada */
+        padding: 20px; /* re-ajuste da posição anterior */
+        width: 35%; 
+        height: 100%;
+        transform: translatex(-100%); /* empurrar elementos para fora da tela*/
+    }   
+
+    .botao {
+        display: flex; /* Abaixo de 450px o display muda para FLEX */
+        flex-direction: column; /* Alinhamento da coluna */
+        align-items: flex-start; /* O botão fica posicionado no canto inferior esquerdo */
+        margin-left: 20px;
+        padding-top: 20px;
+      }
 }
+
+.barra-lateral {
+    transform: translateX(0px);
+}
+
+.linha-0 {
+    transform: rotate(45deg) translate(4.5px, 12px);
+  }
+  
+  .linha-1 {
+    transform: scale(0);
+  }
+  
+  .linha-2 {
+    transform: rotate(-45deg) translateY(-7.5px);
+  }
+
+  
+
